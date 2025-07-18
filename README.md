@@ -29,6 +29,7 @@ I’m **Vaishnavi Patekar**, a passionate Computer Engineering student with a fo
 ✅ Skills with Category Cards  
 ✅ Project Gallery  
 ✅ Achievements
+✅ Certificates
 ✅ Contact Form with Icons  
 ✅ Dark Theme with Blue Accent  
 ✅ Fully Customizable
