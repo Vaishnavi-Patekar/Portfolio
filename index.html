@@ -26,7 +26,7 @@
   </head>
   <!-- < data-spy="scroll" data-target=".site-navbar-target" data-offset="300"> -->
 	  
-	  
+	  <body>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">Vaishnavi Patekar</a>
@@ -47,82 +47,66 @@
 	      </div>
 	    </div>
 	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	 
 
+            <section id="home-section" class="hero">
+ 
 
-<div class="one-third js-fullheight order-md-last profile-wrapper">
-  <img src="images/vina.png" class="profile-img" alt="Profile Image">
+  <div class="profile-container">
+  <div class="profile-pic-wrapper">
+    <img src="images/vina.png" alt="Profile" class="profile-pic">
+  </div>
+  <h1 class="name">Vaishnavi Patekar</h1>
+ <div class="typing-container">
+  <p id="typing-animation" class="typing-text"></p>
 </div>
 
-	          	 
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading" style="color: #00bcd4;">Hello!</span>
-			            <h1 class="mb-4 mt-3" >I'm <span style="color: #00bcd4;">Vaishnavi Patekar</span></h1>
+  <div class="button-group">
+    <a href="https://www.linkedin.com/in/vaishnavi-patekar1907/" target="_blank" class="btn linkedin">LinkedIn</a>
+    <a href="https://github.com/Vaishnavi-Patekar" target="_blank" class="btn github">GitHub</a>
+  </div>
+</div>
 
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
+</section>
 
-						<script>
 
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
+	<script>
+  const typingAnimationElement = document.getElementById('typing-animation');
+  const typingTexts = ['Computer Engineer', 'Web Developer', 'Java Enthusiast'];
+  let typingIndex = 0, charIndex = 0;
 
-						// Create an array of typing text
-						const typingTexts = [
-						'Computer Engineer  ',
-						'Web Developer  ',
-						'Java Enthusiast ',
-						];
+  function type() {
+    if (charIndex < typingTexts[typingIndex].length) {
+      typingAnimationElement.textContent += typingTexts[typingIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, 150);
+    } else {
+      setTimeout(erase, 2000);
+    }
+  }
 
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
+  function erase() {
+    if (charIndex > 0) {
+      typingAnimationElement.textContent = typingTexts[typingIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(erase, 100);
+    } else {
+      typingIndex = (typingIndex + 1) % typingTexts.length;
+      setTimeout(type, 500);
+    }
+  }
 
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(type, 1000);
+  });
+</script>
 
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
 
-						</script>
 
 						<br>
 						<br>
 			  
-			            <!-- <p><a href="https://www.linkedin.com/in/vaishnavi-patekar1907/" class="btn btn-primary py-3 px-4" style="color: #00bcd4;">Linkedin</a>  -->
-                    <!-- <p><a href="https://www.linkedin.com/in/vaishnavi-patekar1907/" 
-   class="btn py-3 px-4" 
-   style="background-color: transparent; border: 2px solid #00bcd4; color: #00bcd4;">
-   Linkedin
-</a>
-</p>
-							<a href="https://github.com/Vaishnavi-Patekar" class="btn btn-white btn-outline-white py-3 px-4">Github</a></p> -->
 
-              <p style="display: flex; gap: 10px; flex-wrap: wrap;">
-  <a href="https://www.linkedin.com/in/vaishnavi-patekar1907/" 
-     class="btn btn-linkedin py-3 px-4">
-     Linkedin
-  </a> 
-  <a href="https://github.com/Vaishnavi-Patekar" 
-     class="btn btn-github py-3 px-4">
-     Github
-  </a>
-</p>
 
 		            </div>
 		          </div>
@@ -569,7 +553,7 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
-     
-    
+   
+
   </body>
 </html>

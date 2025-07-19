@@ -106,6 +106,131 @@
 }
 
 
+.profile-container {
+  text-align: center;
+  padding-top: 150px;
+  color: white;
+}
+
+.profile-pic-wrapper {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 4px solid #00f0ff;
+  box-shadow: 0 0 20px #00f0ff;
+  overflow: hidden;
+}
+
+
+
+.profile-pic {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center; /* This shows more of the face */
+}
+
+.name {
+  font-size: 36px;
+  font-weight: 800;
+  margin-top: 20px;
+  color: #00f0ff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.title {
+  font-size: 22px;
+  margin: 10px 0 30px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s ease;
+}
+
+.linkedin {
+  background-color: #00f0ff;
+  color: black;
+}
+
+.github {
+  border: 2px solid #00f0ff;
+  color: #00f0ff;
+}
+
+.github:hover,
+.linkedin:hover {
+  transform: scale(1.1);
+}
+
+.typing-text {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 500;
+  margin-top: 10px;
+  height: 40px;
+}
+
+.typing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.typing-text {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  min-width: 300px; 
+  white-space: nowrap;
+  overflow: hidden;
+ 
+}
+
+
+#typing-animation::after {
+  content: "";
+  animation: none;
+}
+
+#typing-animation {
+  width: 300px;
+  padding: 5px;
+  font-size: 22px;
+}
+
+
+@keyframes blinkCursor {
+  0% {
+    border-right-color: #fff;
+  }
+  50% {
+    border-right-color: transparent;
+  }
+  100% {
+    border-right-color: #fff;
+  }
+}
+
 
 .about-mf .box-shadow-full {
   padding-top: 4rem;
@@ -120,57 +245,8 @@
   margin-left: 10px;
 }
 
-.profile-img {
-  padding-top: 100px;
-  padding-left: 100px;
-  width: 100px; /* or use max-width: 100%; */
-  height: auto;
-  border-radius: 10px; /* Optional for styling */
-}
 
 
-.profile-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 30px;
-  padding-bottom: 50px;
-}
-
-.profile-img {
-   padding-top: 10px;
-  padding-left: 100px;
-  width: 100px; /* or use max-width: 100%; */
-  height: auto;
-  border-radius: 50%;        /* Curved corners */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Optional styling */
-  object-fit: cover;
-}
-
-.btn-linkedin {
-  background-color: #00bcd4;
-  color: white;
-  border: 2px solid #00bcd4;
-  transition: 0.3s;
-  margin-right: 10px;
-}
-
-.btn-linkedin:hover {
-  background-color: #00a8c3;
-  color: white;
-}
-
-.btn-github {
-  background-color: transparent;
-  color: #00bcd4;
-  border: 2px solid #00bcd4;
-  transition: 0.3s;
-}
-
-.btn-github:hover {
-  background-color: #00bcd4;
-  color: white;
-}
 
 
 
@@ -188,8 +264,8 @@
 }
 
 
-/* Animation styles */
-#typing-animation {
+
+/* #typing-animation {
   position: relative;
   font-size: 30px;
   font-weight: bold;
@@ -201,7 +277,6 @@
 
 #typing-animation:before {
   content: "";
-  /* position: absolute; */
   top: 0;
   left: 0;
   width: 0;
@@ -226,7 +301,7 @@
   to {
     width: 0;
   }
-}
+} */
 
 
 /* project image zoom effect */
@@ -891,3 +966,6 @@
   background-color: #00bcd4;
   color: #000;
 }
+
+
+
