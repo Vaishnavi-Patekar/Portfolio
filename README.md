@@ -15,7 +15,7 @@ This is a fully responsive and modern portfolio site built to showcase my skills
 
 I’m **Vaishnavi Patekar**, a passionate Computer Engineering student with a focus on:
 - Web Development (MERN Stack)
-- Java Development
+- Java
 - AI & ML
 - IoT and Smart Devices
 
